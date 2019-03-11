@@ -8,6 +8,7 @@ const app = express();
 //Middleware from 3rd party libs to parse the body and use cookies
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use('/static', express.static('public'));
 
 //Using pug as our template engine. Other options are ejs or mustache.
 app.set('view engine', 'pug');
